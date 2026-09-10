@@ -1,7 +1,7 @@
 #:schema https://raw.githubusercontent.com/mintyfrankie/brilliant-CV/main/metadata.toml.schema.json
 
 # Set the output language
-# INFO: value must matches folder suffix; i.e "zh" -> "./modules_zh"
+# INFO: value must matches folder suffix; i.e "fr" -> "./modules_fr"
 language = "en"
 
 [layout]
@@ -77,14 +77,3 @@ language = "en"
     header_quote = "Ingénieur Industriel en Informatique — Diplômé sept. 2026, disponible immédiatement"
     cv_footer = "Résumé"
     letter_footer = "Lettre de motivation"
-
-[lang.zh]
-    header_quote = "具有丰富经验的数据分析师，随时可入职"
-    cv_footer = "简历"
-    letter_footer = "申请信"
-
- # For languages that are not written in Latin script
- # Currently supported non-latin language codes: ("zh", "ja", "ko", "ru")
-[lang.non_latin]
-    name = "王道尔"
-    font = "Heiti SC"
