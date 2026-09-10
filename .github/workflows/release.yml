@@ -12,29 +12,37 @@ permissions:
 jobs:
   build-release:
     runs-on: ubuntu-latest
+    container: archlinux:base-devel
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          typst-version: "0.15.1"
-
-      - name: Install fonts
+      - name: Install system deps and distro fonts
         run: |
           set -eux
-          sudo apt-get update
-          sudo apt-get install -y fonts-roboto fonts-source-sans-pro fontconfig unzip curl
-          # Source Sans 3 (no Ubuntu package) from google/fonts GitHub
-          mkdir -p ~/.local/share/fonts/sourcesans3
-          curl -sL -o ~/.local/share/fonts/sourcesans3/SourceSans3-Variable.ttf https://github.com/google/fonts/raw/main/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf
-          # Font Awesome 6 (template's fontawesome package hardcodes v6 names)
-          mkdir -p ~/.local/share/fonts/fontawesome6
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm curl ca-certificates unzip fontconfig adobe-source-sans-fonts ttf-roboto otf-font-awesome
+
+      - name: Install Typst 0.15.1
+        run: |
+          set -eux
+          curl -sL -o /tmp/typst.tar.xz https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-unknown-linux-musl.tar.xz
+          tar -xJf /tmp/typst.tar.xz -C /tmp
+          install -m755 /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+          typst --version
+
+      - name: Install extra fonts (Source Sans 3 + Font Awesome 6)
+        run: |
+          set -eux
+          mkdir -p ~/.local/share/fonts/sourcesans3 ~/.local/share/fonts/fontawesome6
+          # Source Sans 3 has no distro package; fetch variable TTF from google/fonts
+          curl -sL -o ~/.local/share/fonts/sourcesans3/SourceSans3-Variable.ttf "https://github.com/google/fonts/raw/main/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf"
+          # Template's fontawesome package hardcodes v6 family names (distro ships v7)
           curl -sL -o /tmp/fa6.zip https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-desktop.zip
           unzip -o -j /tmp/fa6.zip "*/otfs/*.otf" -d ~/.local/share/fonts/fontawesome6/
           fc-cache -f
           typst fonts | grep -i "Source Sans Pro" || echo "WARNING: Source Sans Pro not found"
+          typst fonts | grep -i "Source Sans 3" || echo "WARNING: Source Sans 3 not found"
           typst fonts | grep -i "Font Awesome 6" || echo "WARNING: Font Awesome 6 not found"
 
       - name: Cache Typst packages
@@ -58,6 +66,7 @@ jobs:
           pdfinfo cv-fr.pdf | grep Pages
 
       - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           files: |
