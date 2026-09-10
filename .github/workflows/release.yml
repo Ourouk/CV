@@ -25,13 +25,10 @@ jobs:
         run: |
           set -eux
           sudo apt-get update
-          sudo apt-get install -y fonts-roboto fonts-adobe-source-sans-pro fontconfig unzip
-          # Source Sans 3 (not in Ubuntu repos) from Google Fonts
+          sudo apt-get install -y fonts-roboto fonts-source-sans-pro fontconfig unzip curl
+          # Source Sans 3 (no Ubuntu package) from google/fonts GitHub
           mkdir -p ~/.local/share/fonts/sourcesans3
-          curl -sL -o /tmp/source-sans-3.zip https://fonts.google.com/download?family=Source%20Sans%203 -H "Accept: application/zip" || true
-          if [ -s /tmp/source-sans-3.zip ]; then
-            unzip -o /tmp/source-sans-3.zip -d ~/.local/share/fonts/sourcesans3/ || true
-          fi
+          curl -sL -o ~/.local/share/fonts/sourcesans3/SourceSans3-Variable.ttf https://github.com/google/fonts/raw/main/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf
           # Font Awesome 6 (template's fontawesome package hardcodes v6 names)
           mkdir -p ~/.local/share/fonts/fontawesome6
           curl -sL -o /tmp/fa6.zip https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-desktop.zip
