@@ -2,6 +2,8 @@ name: Release CV
 
 on:
   push:
+    branches:
+      - main
     tags:
       - "v*"
   workflow_dispatch:
@@ -66,3 +68,15 @@ jobs:
             cv-en.pdf
             cv-fr.pdf
           generate_release_notes: true
+
+      - name: Update rolling current release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: current
+          target_commitish: main
+          name: Current CV
+          make_latest: true
+          files: |
+            cv-en.pdf
+            cv-fr.pdf
