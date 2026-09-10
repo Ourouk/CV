@@ -1,0 +1,69 @@
+name: Release CV
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.15.1"
+
+      - name: Install fonts
+        run: |
+          set -eux
+          sudo apt-get update
+          sudo apt-get install -y fonts-roboto fonts-adobe-source-sans-pro fontconfig unzip
+          # Source Sans 3 (not in Ubuntu repos) from Google Fonts
+          mkdir -p ~/.local/share/fonts/sourcesans3
+          curl -sL -o /tmp/source-sans-3.zip https://fonts.google.com/download?family=Source%20Sans%203 -H "Accept: application/zip" || true
+          if [ -s /tmp/source-sans-3.zip ]; then
+            unzip -o /tmp/source-sans-3.zip -d ~/.local/share/fonts/sourcesans3/ || true
+          fi
+          # Font Awesome 6 (template's fontawesome package hardcodes v6 names)
+          mkdir -p ~/.local/share/fonts/fontawesome6
+          curl -sL -o /tmp/fa6.zip https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-desktop.zip
+          unzip -o -j /tmp/fa6.zip "*/otfs/*.otf" -d ~/.local/share/fonts/fontawesome6/
+          fc-cache -f
+          typst fonts | grep -i "Source Sans Pro" || echo "WARNING: Source Sans Pro not found"
+          typst fonts | grep -i "Font Awesome 6" || echo "WARNING: Font Awesome 6 not found"
+
+      - name: Cache Typst packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/typst
+          key: typst-${{ hashFiles('cv.typ', 'metadata.toml') }}
+          restore-keys: typst-
+
+      - name: Build CV (EN)
+        run: typst compile cv.typ cv-en.pdf
+
+      - name: Build CV (FR)
+        run: |
+          sed -i 's/language = "en"/language = "fr"/' metadata.toml
+          typst compile cv.typ cv-fr.pdf
+
+      - name: Verify PDFs
+        run: |
+          pdfinfo cv-en.pdf | grep Pages
+          pdfinfo cv-fr.pdf | grep Pages
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cv-en.pdf
+            cv-fr.pdf
+          generate_release_notes: true
