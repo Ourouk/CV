@@ -21,7 +21,7 @@ jobs:
         run: |
           set -eux
           pacman -Syu --noconfirm
-          pacman -S --noconfirm curl ca-certificates unzip fontconfig adobe-source-sans-fonts ttf-roboto otf-font-awesome
+          pacman -S --noconfirm curl ca-certificates unzip fontconfig poppler adobe-source-sans-fonts ttf-roboto otf-font-awesome
 
       - name: Install Typst 0.15.1
         run: |
