@@ -7,18 +7,8 @@
 #cvSection("Compétences")
 
 #cvSkill(
-   type: [Langues],
-  info: [Français (C2) #hBar() Anglais (C1)],
-)
-
-#cvSkill(
   type: [Programmation],
-  info: [Python #hBar() Java #hBar() C\# #hBar() C/C++ #hBar() Bash/Shell #hBar() Rust],
-)
-
-#cvSkill(
-  type: [Bibliothèques],
-  info: [OpenCV #hBar() Flask avec OpenAPI],
+  info: [Python #hBar() Java #hBar() C\# #hBar() C/C++ #hBar() Rust #hBar() OpenCV #hBar() Flask avec OpenAPI],
 )
 
 #cvSkill(
@@ -28,12 +18,12 @@
 
 #cvSkill(
   type: [DevOps & Cloud],
-  info: [Git #hBar() GitHub Actions #hBar() Docker #hBar() Docker Compose #hBar() Kubernetes #hBar() Ansible #hBar() DevContainers],
+  info: [GitHub Actions #hBar() Docker #hBar() Docker Compose #hBar() Kubernetes #hBar() Ansible #hBar() Linux],
 )
 
 #cvSkill(
   type: [Cloud & Identité],
-  info: [OVH #hBar() Scaleway #hBar() AWS (cours) #hBar() Keycloak #hBar() Vault #hBar() Prometheus #hBar() MQTT],
+  info: [OVH #hBar() Scaleway #hBar() AWS (cours) #hBar() Keycloak #hBar() Vault #hBar() Prometheus],
 )
 
 #cvSkill(
@@ -42,11 +32,6 @@
 )
 
 #cvSkill(
-  type: [Systèmes & Linux],
-  info: [Déploiement et maintenance sur Debian, RHEL & Alpine],
-)
-
-#cvSkill(
   type: [Réseaux],
-  info: [TCP/IP #hBar() Administration DNS #hBar() Hébergement Mail #hBar() Routeurs Cisco #hBar() Gestion de la sécurité réseau],
+  info: [TCP/IP #hBar() MQTT #hBar() Routeurs Cisco #hBar() Gestion de la sécurité réseau],
 )
