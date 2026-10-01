@@ -7,13 +7,18 @@
 #cvSection("Skills")
 
 #cvSkill(
+  type: [Languages],
+  info: [French (Native) #hBar() #link("https://github.com/Ourouk/CV/blob/main/assets/certification_anglais.jpg")[English (C1 – Certified, Altissia 2025)]],
+)
+
+#cvSkill(
   type: [Programming],
   info: [Python #hBar() Java #hBar() C\# #hBar() C/C++ #hBar() Rust #hBar() OpenCV #hBar() Flask with OpenAPI],
 )
 
 #cvSkill(
   type: [AI & Algorithms],
-  info: [Single/multilayer Perceptron #hBar() Genetic Algorithms #hBar() NEAT (NeuroEvolution of Augmenting Topologies)],
+  info: [Single-layer/multilayer Perceptron #hBar() Genetic Algorithms #hBar() NEAT (NeuroEvolution of Augmenting Topologies)],
 )
 
 #cvSkill(
@@ -23,12 +28,12 @@
 
 #cvSkill(
   type: [Cloud & Identity],
-  info: [OVH #hBar() Scaleway #hBar() AWS (coursework) #hBar() Keycloak #hBar() Vault #hBar() Prometheus],
+  info: [OVH #hBar() Scaleway #hBar() AWS (Cloud Foundations & Architecting) #hBar() Keycloak #hBar() HashiCorp Vault #hBar() Prometheus],
 )
 
 #cvSkill(
   type: [IoT & Hardware],
-  info: [3D Modeling #hBar() Arduino #hBar() MicroPython #hBar() I2S/UART Protocols #hBar() LoRa #hBar() Raspberry Pi (RPI)],
+  info: [3D Modeling #hBar() Arduino #hBar() MicroPython #hBar() I2S/UART Protocols #hBar() LoRa #hBar() Raspberry Pi],
 )
 
 #cvSkill(

@@ -33,7 +33,7 @@
 
 #cvEntry(
   title: [Master Ingénieur Industriel – Orientation Informatique #diploma-link],
-  society: [Haute École de la Province de Liège #h(8pt) #entry-tags(("IoT", "IA", "DevOps", "Développement"))],
+  society: [Haute École de la Province de Liège #h(8pt) #entry-tags(("IoT", "IA", "DevOps", "Réseaux"))],
   date: [2023 - 2026],
   location: [Belgique],
   description: list(
@@ -53,9 +53,9 @@
   ),
 )
   #cvEntry(
-  title: [Bachelier en Science de Gestion],
-  society: [Hec Uliège #h(8pt) #entry-tags(("Anglais", "Finance de base", "Comptabilité"))],
-  date: [2016-2018],
+  title: [Bachelier en Sciences de Gestion],
+  society: [HEC Uliège #h(8pt) #entry-tags(("Finance de base", "Comptabilité"))],
+  date: [2016 - 2018],
   location: [Belgique],
   description: list(
     [Bases en comptabilité, économie, gestion d'équipe – réorientation vers l'ingénierie.],

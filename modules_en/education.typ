@@ -33,7 +33,7 @@
 
 #cvEntry(
   title: [Master's in Industrial Engineering – Computer Science Orientation #diploma-link],
-  society: [Haute École de la Province de Liège #h(8pt) #entry-tags(("IoT", "AI", "DevOps", "Development"))],
+  society: [Haute École de la Province de Liège #h(8pt) #entry-tags(("IoT", "AI", "DevOps", "Networks"))],
   date: [2023 - 2026],
   location: [Belgium],
   description: list(
@@ -55,7 +55,7 @@
 
 #cvEntry(
   title: [Bachelor's in Management Sciences],
-  society: [HEC ULiège #h(8pt) #entry-tags(("English", "Basic Finance", "Accounting"))],
+  society: [HEC ULiège #h(8pt) #entry-tags(("Basic Finance", "Accounting"))],
   date: [2016 - 2018],
   location: [Belgium],
   description: list(

@@ -23,11 +23,18 @@
 )
 
 
+// Dépôt du mémoire : même icône "external link" Nerd Fonts que pour le diplôme (U+F08E).
+#let thesis-link = link(
+  "https://github.com/Ourouk/master-thesis-optimce",
+  text(size: 1em, "\u{f08e}"),
+)
+
+
 #cvSection("Expérience Professionnelle")
 
 #cvEntry(
-  title: [Mémoire de Master – Plateforme / DevOps],
-  society: [CeCoTePe – Seraing #h(8pt) #entry-tags(("CI/CD", "Docker", "Keycloak"))],
+  title: [Mémoire de Master – Plateforme / DevOps #thesis-link],
+  society: [CeCoTePe #h(8pt) #entry-tags(("CI/CD", "Docker", "Keycloak"))],
   date: [2025 - 2026],
   location: [Seraing, BE],
   description: list(
@@ -49,10 +56,10 @@
 
 #cvEntry(
   title: [Jobs Étudiants – IT & Services],
-  society: [Employeurs divers #h(8pt) #entry-tags(("OVH", "DNS", "Mail"))],
+  society: [Employeurs divers #h(8pt) #entry-tags(("OVH", "WordPress", "Auto-hébergé", "Site statique"))],
   date: [2014 - 2026],
   location: [Liège, BE],
   description: list(
-    [Reprise cloud d'une PME sur OVH (DNS, mail, auto-hébergé) ; WordPress cloud, montage PC.],
+    [Reprise cloud d'une PME sur OVH : infrastructure legacy non maintenue remplacée par un site statique et des outils internes open source (DNS, mail, auto-hébergé) ; WordPress cloud, montage PC.],
   ),
 )
