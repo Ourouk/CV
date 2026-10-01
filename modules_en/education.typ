@@ -15,6 +15,7 @@
   description: list(
     [Thesis: Sustaining a research project through open source – refactoring, CI and collaborative governance (CeCoTePe, 2026).],
     [Courses: IoT #hBar() Artificial Intelligence #hBar() SQL/NoSQL Databases #hBar() Networks (CCNA/CCNP/Security/Wireless) #hBar() Software Engineering #hBar() Software Testing & Quality #hBar() DevOps (Docker, Kubernetes, Linux) #hBar() Big Data],
+    [Diploma: #link("https://github.com/Ourouk/CV/blob/main/assets/Diplome_Master_Inge.jpg")[View diploma]],
   ),
 )
 

@@ -15,6 +15,7 @@
   description: list(
     [Thèse : Pérennisation d'un projet de recherche grâce à l'open source – restructuration, CI et gouvernance collaborative (CeCoTePe, 2026).],
     [Cours : IoT #hBar() Intelligence Artificielle #hBar() Bases de données SQL/NoSQL #hBar() Réseaux (CCNA/CCNP/Sécurité/Wireless) #hBar() Génie Logiciel #hBar() Tests & Qualité Logicielle #hBar() DevOps (Docker, Kubernetes, Linux) #hBar() Big Data],
+    [Diplôme : #link("https://github.com/Ourouk/CV/blob/main/assets/Diplome_Master_Inge.jpg")[Voir le diplôme]],
   ),
 )
 
