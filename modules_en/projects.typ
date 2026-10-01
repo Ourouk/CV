@@ -29,12 +29,12 @@
   title: [Selected Engineering & Data Projects],
   society: [#link("https://github.com/Ourouk")[github.com/Ourouk] #h(
       8pt,
-    ) #entry-tags(("Python", "Rust", "Docker", "Data"))],
+    ) #entry-tags(("Python", "Rust", "MQTT"))],
   date: [2024 - Present],
   location: [Open Source],
   description: list(
     [nostalgia-launcher (Python/PySide6): torrent-verified updater with isolated profiles, tests and cross-platform releases.],
-    [EcoArbiter (Rust/MQTT): energy time-series monitor – 3-scenario allowance algorithm, YAML config, Docker Compose, benchmarks.],
+    [EcoArbiter (Rust/MQTT): energy time-series monitor with data analysis – 3-scenario allowance algorithm, YAML config, Docker Compose, benchmarks.],
     [Self-hosted stack on OVH/Scaleway (Nextcloud, DNS/mail) + DevContainers + HEPL Typst template.],
   ),
 )

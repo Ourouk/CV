@@ -27,7 +27,7 @@
 
 #cvEntry(
   title: [Master Thesis – Platform / DevOps],
-  society: [CeCoTePe – Seraing #h(8pt) #entry-tags(("CI/CD", "Docker", "Keycloak"))],
+  society: [CeCoTePe #h(8pt) #entry-tags(("CI/CD", "Docker", "Keycloak"))],
   date: [2025 - 2026],
   location: [Seraing, BE],
   description: list(
@@ -49,10 +49,10 @@
 
 #cvEntry(
   title: [Student Jobs – IT & Service],
-  society: [Various employers #h(8pt) #entry-tags(("OVH", "DNS", "Mail"))],
+  society: [Various employers #h(8pt) #entry-tags(("OVH", "WordPress", "Self-Hosted", "Static Website"))],
   date: [2014 - 2026],
   location: [Liège, BE],
   description: list(
-    [Cloud takeover for a small company on OVH (DNS, mail, self-hosted services); WordPress cloud, PC build/repair.],
+    [Cloud takeover for a small company on OVH: replaced unmaintained legacy infrastructure with a static website and open-source internal tools (DNS, mail, self-hosted services); WordPress cloud, PC build/repair.],
   ),
 )

@@ -7,6 +7,11 @@
 #cvSection("Compétences")
 
 #cvSkill(
+  type: [Langues],
+  info: [Français (Natif) #hBar() #link("https://github.com/Ourouk/CV/blob/main/assets/certification_anglais.jpg")[Anglais (C1 – Certifié, Altissia 2025)]],
+)
+
+#cvSkill(
   type: [Programmation],
   info: [Python #hBar() Java #hBar() C\# #hBar() C/C++ #hBar() Rust #hBar() OpenCV #hBar() Flask avec OpenAPI],
 )
@@ -23,12 +28,12 @@
 
 #cvSkill(
   type: [Cloud & Identité],
-  info: [OVH #hBar() Scaleway #hBar() AWS (cours) #hBar() Keycloak #hBar() Vault #hBar() Prometheus],
+  info: [OVH #hBar() Scaleway #hBar() AWS (Cloud Foundations & Architecting) #hBar() Keycloak #hBar() HashiCorp Vault #hBar() Prometheus],
 )
 
 #cvSkill(
   type: [IoT & Hardware],
-  info: [Modélisation 3D #hBar() Arduino #hBar() MicroPython #hBar() Protocoles I2S/UART #hBar() LoRa #hBar() Raspberry Pi (RPI)],
+  info: [Modélisation 3D #hBar() Arduino #hBar() MicroPython #hBar() Protocoles I2S/UART #hBar() LoRa #hBar() Raspberry Pi],
 )
 
 #cvSkill(
