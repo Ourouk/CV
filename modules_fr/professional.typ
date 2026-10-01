@@ -23,10 +23,17 @@
 )
 
 
+// Dépôt du mémoire : même icône "external link" Nerd Fonts que pour le diplôme (U+F08E).
+#let thesis-link = link(
+  "https://github.com/Ourouk/master-thesis-optimce",
+  text(size: 1em, "\u{f08e}"),
+)
+
+
 #cvSection("Expérience Professionnelle")
 
 #cvEntry(
-  title: [Mémoire de Master – Plateforme / DevOps],
+  title: [Mémoire de Master – Plateforme / DevOps #thesis-link],
   society: [CeCoTePe #h(8pt) #entry-tags(("CI/CD", "Docker", "Keycloak"))],
   date: [2025 - 2026],
   location: [Seraing, BE],

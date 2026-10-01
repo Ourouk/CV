@@ -17,7 +17,7 @@
 
 #show: cv.with(
   metadata,
-  profilePhoto:image("src/logos/me.png", height: 2.8cm)
+  profilePhoto:image("src/logos/me.png", height: 3.6cm)
 ,
 )
 #importModules((

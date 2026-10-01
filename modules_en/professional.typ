@@ -23,10 +23,17 @@
 )
 
 
+// Thesis repository: same Nerd Fonts "external link" icon as the diploma (U+F08E).
+#let thesis-link = link(
+  "https://github.com/Ourouk/master-thesis-optimce",
+  text(size: 1em, "\u{f08e}"),
+)
+
+
 #cvSection("Professional Experience")
 
 #cvEntry(
-  title: [Master Thesis – Platform / DevOps],
+  title: [Master Thesis – Platform / DevOps #thesis-link],
   society: [CeCoTePe #h(8pt) #entry-tags(("CI/CD", "Docker", "Keycloak"))],
   date: [2025 - 2026],
   location: [Seraing, BE],

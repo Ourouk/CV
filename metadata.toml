@@ -69,11 +69,11 @@ language = "en"
 # i.e. [[lang.ru]]
 # each section must contains the following fields
 [lang.en]
-    header_quote = "Industrial Engineer in Computer Science — Graduated Sept 2026, available immediately"
+    header_quote = "Industrial Engineer in Computer Science — Graduated Sept 2026 with distinction, available immediately"
     cv_footer = "Curriculum vitae"
     letter_footer = "Cover letter"
 
 [lang.fr]
-    header_quote = "Ingénieur Industriel en Informatique — Diplômé sept. 2026, disponible immédiatement"
+    header_quote = "Ingénieur Industriel en Informatique — Diplômé sept. 2026 avec distinction, disponible immédiatement"
     cv_footer = "Résumé"
     letter_footer = "Lettre de motivation"
