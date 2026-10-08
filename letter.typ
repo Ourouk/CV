@@ -10,7 +10,8 @@
   recipientAddress: "Company Address Here",
   date: datetime.today().display(),
   subject: "Subject: Hey!",
-  signature: image("src/signature.png"),
+  // Placeholder signature scan — replace with your own or remove.
+  signature: image("src/signature.optimized.jpg"),
 )
 
 Dear Hiring Manager,
